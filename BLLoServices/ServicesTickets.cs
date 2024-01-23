@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TicketsMABB3.DAL;
+using TicketsMABB3.BLLoServices;
+using TicketsMABB3.Models;
+
 namespace TicketsMABB3.BLLoServices
 {
     public class ServicesTickets
