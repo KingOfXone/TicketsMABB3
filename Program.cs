@@ -2,7 +2,8 @@ using TicketsMABB3.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using TicketsMABB3.DAL;
-using static TicketsMABB3.BLLoServices.ServicesTickets;
+using TicketsMABB3.BLLoServices;
+
 
 
 namespace TicketsMABB3
@@ -14,7 +15,7 @@ namespace TicketsMABB3
             var builder = WebApplication.CreateBuilder(args);
             var ConStr = builder.Configuration.GetConnectionString("ConStr");
             builder.Services.AddDbContext<Contexto>(options => options.UseSqlite(ConStr));
-            builder.Services.AddScoped<TicketsBLL>();
+            builder.Services.AddScoped<ServicesTickets>();
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
 

@@ -5,13 +5,12 @@ using TicketsMABB3.Models;
 
 namespace TicketsMABB3.BLLoServices
 {
-    public class ServicesTickets
-    {
-        public class TicketsBLL
+   
+        public class ServicesTickets
         {
             public readonly Contexto Contexto;
 
-            public TicketsBLL(Contexto contexto)
+            public ServicesTickets(Contexto contexto)
             {
                 Contexto = contexto;
             }
@@ -78,5 +77,5 @@ namespace TicketsMABB3.BLLoServices
             }
 
         }
-    }
+    
 }
