@@ -4,6 +4,7 @@
 @using Microsoft.AspNetCore.Components.Forms
 @using TicketsMABB3.BLLoServices
 @using TicketsMABB3.Models
+@rendermode InteractiveServer
 @using System.Globalization;
 
 <PageTitle>Registrar Tickets</PageTitle>
@@ -24,7 +25,7 @@
                     <label>TicketId:</label>
                     <div class="input-group mb-3">
                         <InputNumber @bind-Value="Tickets.TicketId" class="form-control" aria-describedby="BotonBuscar" />
-                        <button @onclick="Buscar" class="btn btn-outline-primary" type="button" id="BotonBuscar"><i class="oi oi-magnifying-glass" /></button>
+                        <button @onclick="Buscar" class="btn btn-primary" type="button" id="BotonBuscar"><i class="bi bi-search" /></button>
                     </div>
                 </div>
 
@@ -81,9 +82,9 @@
 
         <div class="card-footer d-flex justify-content-center">
             <div class="btn-group">
-                <button type="button" class="btn btn-outline-primary" @onclick="Nuevo">Nuevo <i class="oi oi-file" /></button>
-                <button type="submit" class="btn btn-outline-success">Guardar <i class="oi oi-document" /></button>
-                <button type="button" class="btn btn-outline-danger" @onclick="Eliminar"> Eliminar <i class="oi oi-trash" /></button>
+                <button type="button" class="btn btn-outline-primary" @onclick="Nuevo">Nuevo <i class="bi bi-person-plus-fill" /></button>
+                <button type="submit" class="btn btn-outline-success">Guardar <i class="bi bi-floppy-fill" /></button>
+                <button type="button" class="btn btn-outline-danger" @onclick="Eliminar"> Eliminar <i class="bi bi-archive" /></button>
             </div>
         </div>
     </div>

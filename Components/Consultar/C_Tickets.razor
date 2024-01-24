@@ -4,6 +4,7 @@
 @using TicketsMABB3.BLLoServices
 @using TicketsMABB3.Models
 @using System.Globalization;
+@rendermode InteractiveServer
 
 
 @inject ServicesTickets servicesTickets
@@ -34,7 +35,7 @@
             <br />
             <label>Consultar por fechas</label>
             <button type="button" @onclick="Buscar" class="btn btn-primary input-group-text">
-                <i class="oi oi-magnifying-glass " />
+                <i class=" bi bi-search " />
             </button>
         </div>
         <br />
@@ -42,7 +43,7 @@
             <label>Consultar por ID</label>
             <InputNumber @bind-Value="TicketsId" aria-describedby="BotonBuscar" />
             <button type="button" @onclick="Buscar" class="btn btn-primary input-group-text">
-                <i class="oi oi-magnifying-glass " />
+                <i class="bi bi-search " />
             </button>
         </div>
         @if (tickets is not null)
