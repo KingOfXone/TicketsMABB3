@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using TicketsMABB3.DAL;
 using TicketsMABB3.BLLoServices;
 
-
-
 namespace TicketsMABB3
 {
     public class Program

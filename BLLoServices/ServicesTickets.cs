@@ -5,7 +5,6 @@ using TicketsMABB3.Models;
 
 namespace TicketsMABB3.BLLoServices
 {
-   
         public class ServicesTickets
         {
             public readonly Contexto Contexto;
