@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TicketsMABB3.DAL;
-using TicketsMABB3.BLLoServices;
 using TicketsMABB3.Models;
 
 namespace TicketsMABB3.BLLoServices
@@ -22,13 +21,13 @@ namespace TicketsMABB3.BLLoServices
                 return Contexto.Tickets.Any(o => o.TicketId == id);
             }
 
-            private bool Insertar(Models.Tickets Tickets)
+            private bool Insertar(Tickets Tickets)
             {
                 Contexto.Tickets.Add(Tickets);
                 return Contexto.SaveChanges() > 0;
             }
 
-            public bool Modificar(Models.Tickets tickets)
+            public bool Modificar(Tickets tickets)
             {
                 var PrioridadADesechar = Contexto.Tickets.Find(tickets.TicketId);
                 if (tickets != null)
@@ -41,7 +40,7 @@ namespace TicketsMABB3.BLLoServices
 
             }
 
-            public bool Guardar(Models.Tickets tickets)
+            public bool Guardar(Tickets tickets)
             {
                 if (Existe(tickets.TicketId))
                 {
@@ -55,7 +54,7 @@ namespace TicketsMABB3.BLLoServices
                 }
             }
 
-            public bool Eliminar(Models.Tickets tickets)
+            public bool Eliminar(Tickets tickets)
             {
 
 
@@ -68,12 +67,12 @@ namespace TicketsMABB3.BLLoServices
 
             }
 
-            public Models.Tickets? Buscar(int id)
+            public Tickets? Buscar(int id)
             {
                 return Contexto.Tickets.Where(o => o.TicketId == id).AsNoTracking().SingleOrDefault(); ;
             }
 
-            public List<Models.Tickets> GetList(Expression<Func<Models.Tickets, bool>> criterio)
+            public List<Tickets> GetList(Expression<Func<Tickets, bool>> criterio)
             {
                 return Contexto.Tickets.AsNoTracking().Where(criterio).ToList();
             }
